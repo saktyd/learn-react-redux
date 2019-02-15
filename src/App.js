@@ -17,7 +17,10 @@ function counter(state = 0, action) {
 
 // 2. STORE FROM REDUX
 // PUT REDUCER INTO STORE
-const store = createStore(counter);
+const store = createStore(
+  counter,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 class App extends Component {
   render() {

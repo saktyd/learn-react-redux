@@ -7,8 +7,20 @@ class Counter extends Component {
       <div>
         <p>Clicked: {this.props.counter} times.</p>
         <p>
-          <button>INCREMENT</button>
-          <button>DECREMENT</button>
+          <button
+            onClick={() => {
+              this.props.dispatch({ type: 'INCREMENT' });
+            }}
+          >
+            INCREMENT
+          </button>
+          <button
+            onClick={() => {
+              this.props.dispatch({ type: 'DECREMENT' });
+            }}
+          >
+            DECREMENT
+          </button>
         </p>
       </div>
     );
